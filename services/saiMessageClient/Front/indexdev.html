@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SaiMessage</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
+
+    <!-- Custom styles for this template-->
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <!-- <i class="fas fa-laugh-wink"></i> -->
+                    <i class="fas">𒆠</i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Sai Message <sup></sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-scroll"></i>
+                    <span>Feed</span></a>
+            </li>
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Personal
+            </div>
+
+            <!-- Nav Item - Conversations Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseConversations"
+                    aria-expanded="true" aria-controls="collapseConversations">
+                    <i class="fas fa-fw fa-comments"></i>
+                    <span>Conversations</span>
+                </a>
+                <div id="collapseConversations" class="collapse" aria-labelledby="collapseConversations" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                      <a href="#" class="btn btn-primary btn-icon-split btn-sm createNewConversation" style="font-size:.7rem;">
+                          <span class="icon text-white-50">
+                              <i class="fas fa-comments"></i>
+                          </span>
+                          <span class="text">Create New Conversation</span>
+                        </a>
+                        <!-- <h6 id="currentProfileInConversation" class="longstringWrap" style="display:none">Current ID:</h6> -->
+                        <conversations id="conversationsList">
+                        </conversations>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Conversations Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseGroups"
+                    aria-expanded="true" aria-controls="collapseGroups">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Groups</span>
+                </a>
+                <div id="collapseGroups" class="collapse" aria-labelledby="collapseGroups" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                      <div class="bg-white py-2 collapse-inner rounded">
+                        <a href="#" class="btn btn-primary btn-icon-split btn-sm createNewGroup" style="font-size:.7rem;">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-comments"></i>
+                            </span>
+                            <span class="text">Create New Goup</span>
+                          </a>
+                          <!-- <h6 id="currentProfileInConversation" class="longstringWrap" style="display:none">Current ID:</h6> -->
+                          <conversations id="conversationsList">
+                          </conversations>
+                      </div>
+                        <usergroups id="groupsList">
+                        </usergroups>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Channels Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseChannels"
+                    aria-expanded="true" aria-controls="collapseChannels">
+                    <i class="fas fa-fw fa-bullhorn"></i>
+                    <span>Channels</span>
+                </a>
+                <div id="collapseChannels" class="collapse" aria-labelledby="collapseChannels"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                      <userchannels id="channelsList">
+                      </userchannels>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Bots Menu -->
+            <!-- <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBots"
+                    aria-expanded="true" aria-controls="collapseBots">
+                    <i class="fas fa-fw fa-robot"></i>
+                    <span>Bots</span>
+                </a>
+                <div id="collapseBots" class="collapse" aria-labelledby="headingUcollapseBotstilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                      <userbots id="botsList">
+                      </userbots>
+                    </div>
+                </div>
+            </li> -->
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a id="myContacts" class="nav-link myContacts" href="#" >
+                    <i class="fas fa-fw fa-address-book"></i>
+                    <span>Contacts</span>
+                </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Public
+            </div>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link findChannel" href="#">
+                    <i class="fas fa-fw fa-eye"></i>
+                    <span>Find Channel</span></a>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link findGroup" href="#">
+                    <i class="fas fa-fw fa-book-open"></i>
+                    <span>Find Group</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Find Bot</span></a>
+            </li> -->
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-blog"></i>
+                    <span>App Update</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+            <!-- Sidebar Message -->
+            <div class="sidebar-card">
+                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="">
+                <p class="text-center mb-2"><strong>Advertising</strong> area</p>
+                <a class="btn btn-success btn-sm" href="http://google.com">Buy the adv here!</a>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <div class="small">
+                      <div id="notificationServerStatus">Notification server status: ON</div>
+                      <div id="p2pServerStatus">Connected to 2 peers</div>
+                    </div>
+                    <!-- Topbar Search -->
+                    <!-- <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="!!!Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form> -->
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1 convdropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter badge-conv-counter"></span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div id="dropdowncontainer" class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Alerts Center
+                                </h6>
+                                <alertsarea id="alertsarea">
+                                <!-- <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a> -->
+                              </alertsarea>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Messages -->
+                        <li class="nav-item dropdown no-arrow mx-1 groupdropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-comment-dots fa-fw"></i>
+                                <!-- Counter - Messages -->
+                                <span class="badge badge-danger badge-counter bagde-group-counter"></span>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                    Goups Center
+                                </h6>
+                                <groupsarea id="groupsarea">
+                                <!-- <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a> -->
+                              </groupsarea>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><profile id='currentProfileName'> </profile><br><profile id='currentProfile'> </profile></span>
+                                <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown" >
+                                <profiles id="profilesList">
+                                </profiles>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item createNewProfile" id="createNewProfile" href="#">
+                                    <i class="fas fa-id-card-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Create New Profile
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                 <a class="dropdown-item" id="settings" href="#">  <!--data-toggle="modal" data-target="#logoutModal" -->
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid" id="contentArea">
+                  <scrollArea>
+                  </scrollArea>
+                  <div class="row">
+                    <div class="col-xl-12 col-md-12 mb-1"></div>
+                      <!-- Pending Requests Card Example -->
+                      <div class="col-xl-12 col-md-12 mb-12">
+                        <button class="btn btn-sm btn-warning tour" >Take a tour</button>
+                        <button class="btn btn-sm btn-primary findChannel" >Find Channels</button>
+                        <button class="btn btn-sm btn-primary myContacts" >Find Contacts</button>
+                        <button class="btn btn-sm btn-primary findGroup" >Find public groups</button>
+                        <button class="btn btn-sm btn-info createNewProfile" >Create New Profile</button>
+                      </div>
+                  </div>
+
+
+
+
+                    <!-- Content Row -->
+                    <div class="row">
+                      <div class="col-xl-12 col-md-12 mb-1"></div>
+                        <!-- Pending Requests Card Example -->
+                        <div class="col-xl-12 col-md-12 mb-12">
+                            <div class="card border-bottom-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                              Welcome manifest
+                                            </div>
+                                            <div class="h5 mb-0 text-gray-800">
+                                              <h3>We protect your freedom from government and corporations with technology and not with trust</h3>
+
+                                              <p>Freedom of speech is a principle that supports the freedom of an individual or a community to articulate their opinions and ideas without fear of retaliation, censorship, or legal sanction.</p>
+
+                                              <p>The term freedom of expression is usually used synonymously but, in legal sense, includes any activity of seeking, receiving, and imparting information or ideas, regardless of the medium used.</p>
+
+                                              <p>The right to freedom of expression is recognized as a human right under article 19 of the Universal Declaration of Human Rights and recognized in international human rights law in the International Covenant on Civil and Political Rights.</p>
+                                            </div>
+                                            <!-- <div class="h5 mb-0 font-weight-bold text-gray-800">18</div> -->
+                                        </div>
+                                        <div class="col-auto">
+                                            <!-- <i class="fas fa-comments fa-2x text-gray-300"></i> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+                <br>
+                <br>
+                <br>
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="d-none sticky-footer bg-white fixed-bottom" style="padding:1rem!important">
+              <!-- <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 " style="width:90%"> -->
+                    <div class="input-group">
+<canvas style="display:none" id="my_canvas" width="200" height="200"></canvas>
+  <!-- upload image canvas
+  <div>
+  <button id='go' style="display: none;">Get string</button>
+  <textarea id="output" style="width: 100%;"></textarea>
+</div>-->
+                        <input type="text" class="form-control bg-light border-0" placeholder="Write a message..." id="messageInput">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" id="sendMessageButton" type="button">
+                                <i class="fas fa-paper-plane fa-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                <!-- </form> -->
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Modal-->
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <!-- <a class="btn btn-primary" href=""></a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- switch checkbox style-->
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+    <script src="js/templates.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/utils.js"></script>
+    <script>
+    $('#modal').on('shown.bs.modal', function (event) {
+         var triggerElement = $(event.relatedTarget); // Button that triggered the modal
+         if ( $(triggerElement).attr('data-btype') == 'inviteToGroup') {
+           $('.modal-title').html('Invite to the group');
+           var groupInfo = JSON.parse( $(triggerElement).attr('data-conversationInfo') )
+           var groupInfoArray = [];
+           $.each( groupInfo, function( key, value ) {
+             groupInfoArray.push({"name":key,"value":value});
+           });
+           groupInfoArray = JSON.stringify(groupInfoArray)
+           var my_address = $('#currentProfile').html();
+           var form = `<form class="inviteToGroupForm" data-groupInfo='${groupInfoArray}'>
+              My ID:<input class="form-control" id="my_address" name="my_address" value="${my_address}">
+              With ID:<input class="form-control" type="text" id="conversationWithAddress" name="with_address"><br>
+              <button class="btn btn-primary" type="submit">Invite</button>
+           </form>
+           <h3>Serach contact</h3>
+           <form id="searchchContact4conversationForm">
+             <div class="form-group">
+               <label for="nameserver">Name server</label>
+               <select class="form-control"id="nameserver" name="nameserver">
+                 <option>saiMessage public name server</option>
+               </select>
+             </div>
+             <div class="form-group">
+               <label for="serachContact">Search</label>
+               <input type="text" class="form-control" id="serachContact4conversation" name="serachContact" placeholder=" id, name, info...">
+             </div>
+             <button type="submit" class="btn btn-primary">Search</button>
+           </form>
+           <searchContactSection>
+           </searchContactSsection>
+           `
+         }
+         if ( $(triggerElement).attr('data-btype') == 'addToAddressBook') {
+           $('.modal-title').html('Add Contact');
+           var address = $(triggerElement).html()
+           var form = `<form class="addContactForm" >
+              <input type="text" class="form-control" name="address" value="${address}" placeholder="address" ><br>
+              <input type="text" class="form-control" name="name" value="" placeholder="name" ><br>
+              <select class="form-control" name="type"><option value="private">private</option>
+              <option value="channel">channel</option>
+              <option value="group">group</option>
+              </select><br>
+              <input type="text" class="form-control" name="info" value="" placeholder="additional info" ><br>
+              <button type="submit" class="btn btn-primary btn-sm">Add</button>
+              <button style="float:right;" type="button" class="btn btn-secondary btn-sm">Block</button>
+           </form>`
+         }
+
+         $('.modal-body').html(form);
+    });
+
+    __UniqID = 1;
+    function uid() {
+      __UniqID++;
+      return '_'+__UniqID;
+    }
+    function b64DecodeUnicode(str) {
+        str = decodeURIComponent(str)
+        return decodeURIComponent(atob(str).split('').map(function(c) {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+              }).join('')).replace(/[\u00A0-\u9999<>\&]/g, function(i) {
+                         return '&#'+i.charCodeAt(0)+';';
+                       });
+
+    }
+
+    function prepareMessage(Message) {
+      Message = Message.replace(/(\r\n|\n|\r)/gm, "");
+      var regex = /&#60;p&#62;(.|\n)*?&#60;\/p&#62;/g
+      var string = Message;
+      var matches = string.matchAll(regex);
+      for (const match of matches) {
+        var themath = match[0].replace('&#60;p&#62;','')
+        themath = themath.replace('&#60;/p&#62;','')
+        Message = Message.replace(match[0],'<p>'+themath+'</p>')
+      }
+      var regex = /&#60;b&#62;(.|\n)*?&#60;\/b&#62;/g
+      var string = Message;
+      var matches = string.matchAll(regex);
+      for (const match of matches) {
+        var themath = match[0].replace('&#60;b&#62;','')
+        themath = themath.replace('&#60;/b&#62;','')
+        Message = Message.replace(match[0],'<b>'+themath+'</b>')
+      }
+      var regex = /&#60;i&#62;(.|\n)*?&#60;\/i&#62;/g
+      var string = Message;
+      var matches = string.matchAll(regex);
+      for (const match of matches) {
+        var themath = match[0].replace('&#60;i&#62;','')
+        themath = themath.replace('&#60;/i&#62;','')
+        Message = Message.replace(match[0],'<i>'+themath+'</i>')
+      }
+      var regex = /~imgBase64:~(.|\n)*?~\/imgBase64~/g
+      var string = Message;
+      var matches = string.matchAll(regex);
+      for (const match of matches) {
+        var themath = match[0].replace('~imgBase64:~','')
+        themath = themath.replace('~\/imgBase64~','')
+        Message = Message.replace(match[0],'<img src="data:image/png;base64,'+themath+'" />')
+      }
+
+      var regex = /~link:~(.|\n)*?~\/link~/g
+      var string = Message;
+      var matches = string.matchAll(regex);
+      for (const match of matches) {
+        var themath = match[0].replace('~link:~','')
+        themath = themath.replace('~\/link~','')
+        themath = JSON.parse(themath)
+        Message = Message.replace(match[0],'<a href="'+themath.l+'" >'+themath.t+'</a>')
+      }
+
+      var regex = /~imgMSL64:~(.|\n)*?~\/imgMSL64~/g
+      var string = Message;
+      var matches = string.matchAll(regex);
+      for (const match of matches) {
+        var themath = match[0].replace('~imgMSL64:~','')
+        themath = themath.replace('~\/imgMSL64~','')
+        var rnd = Math.floor(Math.random() * 999) + 1;
+        Message = Message.replace(match[0],'<img src="" id="'+rnd+'" />')
+        themath = themath.replaceAll('&#38;','&')
+        $.get(themath,function(res){
+            if (typeof res != 'undefined') {  // && typeof res.result[0].image != 'undefined') {
+              $('#'+rnd).attr('src','data:image/png;base64,'+res);
+            // $('#'+rnd).attr('src','data:image/png;base64,'+res.result[0].image);
+            }
+          })
+      }
+      Message = Message.replaceAll('&#60;br&#62;','<br>');
+      Message = Message.replaceAll('&#60;/br&#62;','</br>');
+      Message = Message.replaceAll('&#60; /br&#62;','</br>');
+      Message = Message.replaceAll('&#60;br/&#62;','<br>');
+      Message = Message.replaceAll('&#60;br /&#62;','<br>');
+      Message = Message.replaceAll('~sbscrAction:~','<button class="btn btn-sm subscribeActionButton" data-sbscrID=`');
+      Message = Message.replaceAll('~/sbscrAction~','`>Subscribe</button><button class="btn btn-sm removeConversationActionButton">Decline</button>');
+      // Message.message = Message.message.replace('&#60;p&#62;','<p>');
+      // Message.message = Message.message.replace('&#60;/p&#62;','</p>');
+      // Message.message = Message.message.replace('&#60;b&#62;','<b>');
+      // Message.message = Message.message.replace('&#60;/b&#62;','</b>');
+
+      // Message = Message.replaceAll('~link:~','<a href="');
+      // Message = Message.replaceAll('~/link~','" >external link</a>');
+      return Message;
+    }
+
+    </script>
+    <script>
+    function callApi($method,$param=null,f=null,fparam=null) {
+      console.log('Type of callApiParam',typeof $param);
+      if ($param == null) {
+        $param = {}
+        $param.method = $method;
+      } else {
+        $param.push({"name":"method","value":$method})
+      }
+      console.log('callApiParam',$param);
+      $.post( _Api, $param,function(res){
+        console.log('callApi $param:',$param);
+        console.log('callApi result:',res);
+        if (typeof f == 'function') f(res,fparam);
+      });
+    }
+    function loadTemplate($tmpl,f=null,fparam=null) {
+      $('#contentArea').html(_Templates[$tmpl]);
+      if (typeof f == 'function') f(fparam);
+    }
+    function getInfoByConvId(id) {
+      return id;
+    }
+    function getInfoByAddress(id) {
+      if (!__AddressesInfo[id]) {
+        // var fromNameserver = $.get(_nameServer+'get_data&address='+id,function(info){
+        //   if (info["result"][0].name) {
+        //     __AddressesInfo[id] = {}
+        //     __AddressesInfo[id].name = info["result"][0].name;
+        //   }
+        // })
+        return id;
+      }
+      else return __AddressesInfo[id].name;
+    }
+    function onSocketMessage(e) {
+      console.log("Server: " + e.data);
+
+      var MessageSTR = JSON.parse(e.data)
+      try {var Message = JSON.parse(MessageSTR) } catch(err){console.log('error',err);}
+      if (typeof Message == "undefined" ) { return }
+      if (Message.type == 'key-exchange-answer') {
+        callApi('getMyConversations',null,function(res){
+          var obj = JSON.parse(res)
+          $.each( obj, function( i, id ) {
+            if ($(`h6[data-theId=${id}]`).length == 0) {
+              var info = getInfoByConvId(id);
+              $('#conversationsList').append(`<h6 class="longstringWrap conversationLink" data-theId="${id}" href="buttons.html">${info}</h6>`)
+            }
+          });
+        })
+        return;
+      }
+      if ( Message.hasOwnProperty('messageFrontId') ) {
+        $('#'+Message.messageFrontId).removeClass('sending');
+        return;
+      }
+      Message.message = b64DecodeUnicode(Message.message);
+      var from = getInfoByAddress(Message.from);
+      Message.message = prepareMessage(Message.message);
+      if (Message.conversationId != $('.activeHLink').attr("data-theId")) {
+        $("h6:contains("+Message.conversationId+")").addClass('newMessage');
+        var trimmessage = Message.message.substring(0, 40);
+        var faicon = 'fa-comments'
+        var linkClass = 'conversationLink'
+        var iconBgClass = 'bg-warning'
+        if (Message.type == 'channel') {
+          faicon = 'fa-bullhorn'
+          linkClass = 'channelLink'
+          iconBgClass = 'bg-info'
+        }
+        if (Message.type != 'group') {
+          var counter = parseInt($('.badge-conv-counter').html());
+          if (!counter) counter=0;
+          $('.badge-conv-counter').html(counter+1);
+          // beep();
+          $('#alertsarea').append(`
+            <a class="dropdown-item d-flex align-items-center ${linkClass}" data-theId="${Message.conversationId}" href="#">
+                <div class="mr-3">
+                    <div class="icon-circle ${iconBgClass}">
+                        <i class="fas ${faicon} text-white"></i>
+                    </div>
+                </div>
+                <div>
+                    <div class="small text-gray-500">From: ${from}</div>
+                    ${trimmessage}
+                </div>
+            </a>
+            `);
+        } else {
+          var gr_counter = parseInt($('.bagde-group-counter').html());
+          if (!gr_counter) gr_counter=0;
+          $('.bagde-group-counter').html(gr_counter+1);
+          // beep();
+          var group = $("h6[data-theId='"+Message.conversationId+"']" ).html()
+          $('#groupsarea').append(`
+            <a class="dropdown-item d-flex align-items-center groupLink" data-theId="${Message.conversationId}" href="#">
+                <div class="mr-3">
+                    <div class="icon-circle ${iconBgClass}">
+                        <i class="fas ${faicon} text-white"></i>
+                    </div>
+                </div>
+                <div>
+                    <div class="small text-gray-500">Group:${group} <br>From: ${from}</div>
+                    ${trimmessage}
+                </div>
+            </a>
+            `);
+        }
+      }
+      if (typeof $('.activeHLink').html() == 'undefined') {
+        try {
+          var mesBlock = `
+          <!-- Content Row -->
+          <div class="row">
+              <div class="col-xl-12 col-md-12 mb-1"></div>
+              <!-- Pending Requests Card Example -->
+              <div class="col-xl-12 col-md-12 mb-12">
+                  <div class="card border-left-success shadow h-100 py-2">
+                      <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                              <div class="col mr-2">
+                                  <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                    <span class="prtAddr">${Message.from}</span>
+                                  </div>
+                                  <div class="h5 mb-0 text-gray-800">${Message.message}</div>
+                                  <!-- <div class="h5 mb-0 font-weight-bold text-gray-800">18</div> -->
+                              </div>
+                              <div class="col-auto">
+                                  <i class="fas fa-comments fa-2x text-gray-300"></i>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          `;
+          $('scrollArea').prepend(mesBlock);
+        } catch(er) { }
+      }
+      if (Message.conversationId == $('.activeHLink').attr("data-theId") && Message.from == $('#converationMyId').attr('data-theId') ) {
+        var mesBlock = `
+        <!-- Content Row -->
+        <div class="row">
+          <div class="col-xl-4 col-md-4 mb-4"></div>
+            <!-- Pending Requests Card Example -->
+            <div class="col-xl-8 col-md-8 mb-4">
+                <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                  me - <span class="prtAddr">${Message.from}</span>
+                                </div>
+                                <div class="h5 mb-0 text-gray-800">${Message.message}</div>
+                                <!-- <div class="h5 mb-0 font-weight-bold text-gray-800">18</div> -->
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-comments fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      `;
+      $('conversationArea').append(mesBlock);
+      // $('#contentArea').append(mesBlock);
+      // $('#contentArea').append(mesBlock.replace(/\+/g,' '));
+      // window.scrollTo(0,document.body.scrollHeight);
+      document.getElementById('content').scrollTop = document.getElementById('content').scrollHeight;
+      }
+      if (Message.conversationId == $('.activeHLink').attr("data-theId") && Message.from !=  $('#converationMyId').attr('data-theId') ) {
+        var mesBlock = `
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Pending Requests Card Example -->
+            <div class="col-xl-8 col-md-8 mb-4 align-self-start">
+                <div class="card border-left-warning shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                  ${from} - <span class="prtAddr">${Message.from}</span>
+                                </div>
+                                <div class="h5 mb-0 text-gray-800">${Message.message}</div>
+                                <!-- <div class="h5 mb-0 font-weight-bold text-gray-800">18</div> -->
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-comments fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-4 mb-4"></div>
+        </div>
+      `;
+      $('conversationArea').append(mesBlock.replace(/\+/g,' '));
+      // $('#contentArea').append(mesBlock.replace(/\+/g,' '));
+      // window.scrollTo(0,document.body.scrollHeight);
+      document.getElementById('content').scrollTop = document.getElementById('content').scrollHeight;
+      }
+    };
+
+    // ready
+    $(document).ready(function(){
+      // checking p2p connection
+      $("#p2pServerStatus").css('color','blue');
+      $("#p2pServerStatus").html('Checking p2p network');
+      callApi('getP2Pstatus',null,function(res){
+        if (res == '0' || res == '2' ) {
+          $("#p2pServerStatus").css('color','red');
+          $("#p2pServerStatus").html('No connection to p2p network');
+        } else {
+          $("#p2pServerStatus").css('color','');
+          $("#p2pServerStatus").html('Connected to '+res+' peers');
+        }
+      })
+      window.setInterval(function(){
+        callApi('getP2Pstatus',null,function(res){
+          if (res == '0' || res == '2' ) {
+            $("#p2pServerStatus").css('color','red');
+            $("#p2pServerStatus").html('No connection to p2p network');
+          } else {
+            $("#p2pServerStatus").css('color','');
+            $("#p2pServerStatus").html('Connected to '+res+' peers');
+          }
+        })
+      }, 60000)
+      // /checking p2p connection
+      // websocket
+      var socket = new WebSocket(_saiWebsocket);
+      $("#notificationServerStatus").css('color','blue');
+      $("#notificationServerStatus").html('Notification server status: initializing');
+      window.setInterval(function(){
+        console.log("Socket status",socket.readyState);
+        if (socket.readyState !== 1) {
+          $("#notificationServerStatus").css('color','red');
+          $("#notificationServerStatus").html('Notification server status: OFF - trying to reconnect');
+          socket = new WebSocket(_saiWebsocket);
+          socket.onmessage = function(e) {
+            onSocketMessage(e);
+          }
+        } else {
+          $("#notificationServerStatus").css('color','');
+          $("#notificationServerStatus").html('Notification server status: ON');
+        }
+      }, 5000);
+      socket.onopen = function () {
+    		console.log("Status: Connected");
+    	};
+    	socket.onmessage = function(e) { onSocketMessage(e); }
+      //  /websocket
+
+      callApi('getMyContacts',null,function(res){
+
+        var obj = JSON.parse(res)
+        __AddressesInfo = obj
+      // get initial values & history
+      callApi('getMyIds',null,function(res){
+        var obj = JSON.parse(res)
+        if (obj.length == 0 ) {
+          displayWelcomeodal();
+        } else {
+          $.each( obj, function( i, val ) {
+              var name = getInfoByAddress(val);
+              $('#profilesList').append(`
+              <a class="dropdown-item currentProfileSelectLink" data-profileId="${val}" data-profileName="${name}" href="#">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  ${name}<br>
+                  ${val}
+              </a>`)
+          });
+          var initProfile = obj[Object.keys(obj)[0]]
+          $('#currentProfile').html(initProfile)
+          $('#currentProfileName').html(getInfoByAddress(initProfile))
+        }
+      })
+
+
+      callApi('getMyConversations',null,function(res){
+        var obj = JSON.parse(res)
+        $.each( obj, function( i, id ) {
+          var info = getInfoByConvId(id);
+          $('#conversationsList').append(`<h6 class="longstringWrap conversationLink" data-theId="${id}" href="buttons.html">${info}</h6>`)
+        });
+      })
+
+
+      callApi('getMySubscriptions',null,function(res){
+        var obj = JSON.parse(res)
+        console.log('Subscription OBJ',obj);
+        var channelsList = '';
+        var botsList = '';
+        var groupsList = '';
+        var info = '';
+        $.each( obj, function( id, subscr ) {
+          if (subscr.name) { info = subscr.name } else {info = id }
+          if(subscr.type == 'channel') {
+            channelsList+=`<h6 class="longstringWrap channelLink" data-theId="${id}" href="buttons.html">${info}</h6>`
+          }
+          if(subscr.type == 'bot') {
+            botsList+=`<h6 class="longstringWrap botLink" data-theId="${id}" href="buttons.html">${info}</h6>`
+          }
+          if(subscr.type == 'group') {
+            groupsList+=`<h6 class="longstringWrap groupLink" data-theId="${id}" href="buttons.html">${info}</h6>`
+          }
+        });
+        $('#channelsList').html(channelsList)
+        $('#botsList').html(botsList)
+        $('#groupsList').html(groupsList)
+      })
+    })
+      //  /get initial values & history
+      $(document).on('click','.channelLink',function(){
+        $('footer').addClass('d-none')
+        $('.activeHLink').removeClass('activeHLink')
+        $(this).addClass('activeHLink')
+        loadTemplate('channelArea',function(){
+          callApi('getConversationInfo',[{"name":"conversationId","value":$('.activeHLink').attr("data-theId")}],function(res){
+            var obj = JSON.parse(res)
+            if (typeof obj.history == 'string') {
+              var historyItems = [];
+              console.log("HISTORY_ITEMS",historyItems);
+              obj.history.replace(/\[saiStorageHistory_([0-9]+)\](.*?)\[\/saiStorageHistory_([0-9]+)\]/g, function(g0,g1,g2){historyItems.push(g2);})
+              $.each(historyItems,function(i,v){
+                var Message = JSON.parse(v);
+                Message.message = b64DecodeUnicode(Message.message);//.replace(/(\r\n|\n|\r)/gm, "");
+                var from = getInfoByAddress(Message.from)
+                Message.message = prepareMessage(Message.message)
+                {
+                  var mesBlock = `
+                  <!-- Content Row -->
+                  <div class="row">
+                      <!-- Pending Requests Card Example -->
+                      <div class="col-xl-12 col-md-12 mb-1 align-self-start">
+                          <div class="card border-bottom-info shadow h-100 py-2">
+                              <div class="card-body">
+                                  <div class="row no-gutters align-items-center">
+                                      <div class="col mr-2">
+                                          <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                            ${from} - <span class="prtAddr">${Message.from}</span>
+                                          </div>
+                                          <div class="h5 mb-0 text-gray-800">${Message.message}
+                                            <div class="discussionGroupLink">
+                                              <div class="likeBox">
+                                                <span><i class="fas fa-fw fa-plus likeBoxPlus"></i></span>
+                                                <span><i class="fas fa-fw fa-minus likeBoxMinus"></i></span>
+                                              </div>
+                                              <a href="#" class="joinDiscussion">Join to the discussion</a>
+                                            </div>
+                                          </div>
+                                          <!-- <div class="h5 mb-0 font-weight-bold text-gray-800">18</div> -->
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xl-4 col-md-4 mb-4"></div>
+                  </div>
+                `;
+                $('conversationArea').append(mesBlock.replace(/\+/g,' '));
+                // $('#contentArea').append(mesBlock.replace(/\+/g,' '));
+                // window.scrollTo(0,document.body.scrollHeight);
+                document.getElementById('content').scrollTop = document.getElementById('content').scrollHeight;
+                }
+              })
+            }
+            if (typeof obj.history == 'array') {
+              $('conversationArea').html(obj.history)
+            }
+
+          })
+        })
+      })
+
+
+      $(document).on('click','.conversationLink',function(){
+        $('.activeHLink').removeClass('activeHLink')
+        $(this).removeClass('newMessage')
+        $(this).addClass('activeHLink')
+        loadTemplate('conversationArea',function(){
+          callApi('getConversationInfo',[{"name":"conversationId","value":$('.activeHLink').attr("data-theId")}],function(res){
+            console.log('getConversationInfo',res);
+            __RES = res;
+            var obj = JSON.parse(res)
+            if (obj.name) { $('#conversationName').val(obj.name);
+            } else { $('#conversationName').val(obj.convId); }
+            $('.clearConversationAction').attr('data-conversationId',obj.convId);
+            $('.arciveConversationAction').attr('data-conversationId',obj.convId);
+            console.log('getConversationInfo obj',obj);
+            var me = getInfoByAddress(obj.me)
+            var cwith = getInfoByAddress(obj.with)
+            $('#currentProfile').html(obj.me)
+            $('#currentProfile').attr('data-theId',obj.me)
+            $('#currentProfileName').html(me)
+            $('#converationMyId').html(me)
+            $('#converationMyId').attr('data-theId',obj.me)
+            $('#converationWithId').html(cwith)
+            $('#converationWithId').attr('data-theId',obj.with)
+            $('#converationStatus').html(obj.status)
+            if (obj.status!='active') {
+              $('footer').addClass('d-none')
+            } else {$('footer').removeClass('d-none') }
+            if (typeof obj.history == 'string') {
+              var historyItems = [];
+              // g0 - date, g2 - object, g1 - full
+              obj.history.replace(/\[saiStorageHistory_([0-9]+)\](.*?)\[\/saiStorageHistory_([0-9]+)\]/g, function(g0,g1,g2){historyItems.push(g2);})
+              try{
+              $.each(historyItems,function(i,v){
+                var Message = JSON.parse(v);
+                Message.message = b64DecodeUnicode(Message.message);
+                var from = getInfoByAddress(Message.from)
+                Message.message = prepareMessage(Message.message);
+                if (Message.conversationId == $('.activeHLink').attr("data-theId") && Message.from == $('#converationMyId').attr('data-theId') ) {
+                  var mesBlock = `
+                  <!-- Content Row -->
+                  <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-4"></div>
+                      <!-- Pending Requests Card Example -->
+                      <div class="col-xl-8 col-md-8 mb-4">
+                          <div class="card border-left-success shadow h-100 py-2">
+                              <div class="card-body">
+                                  <div class="row no-gutters align-items-center">
+                                      <div class="col mr-2">
+                                          <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                            me - <span class="prtAddr">${Message.from}</span>
+                                          </div>
+                                          <div class="h5 mb-0 text-gray-800">${Message.message}</div>
+                                          <!-- <div class="h5 mb-0 font-weight-bold text-gray-800">18</div> -->
+                                      </div>
+                                      <div class="col-auto">
+                                          <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                `;
+                $('conversationArea').append(mesBlock);
+                // $('#contentArea').append(mesBlock);
+                // window.scrollTo(0,document.body.scrollHeight);
+                document.getElementById('content').scrollTop = document.getElementById('content').scrollHeight;
+                }
+                if (Message.conversationId == $('.activeHLink').attr("data-theId") && Message.from != $('#converationMyId').attr('data-theId') ) {
+                  var mesBlock = `
+                  <!-- Content Row -->
+                  <div class="row">
+                      <!-- Pending Requests Card Example -->
+                      <div class="col-xl-8 col-md-8 mb-4 align-self-start">
+                          <div class="card border-left-warning shadow h-100 py-2">
+                              <div class="card-body">
+                                  <div class="row no-gutters align-items-center">
+                                      <div class="col mr-2">
+                                          <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                            ${from} - <span class="prtAddr">${Message.from}</span>
+                                          </div>
+                                          <div class="h5 mb-0 text-gray-800">${Message.message}</div>
+                                          <!-- <div class="h5 mb-0 font-weight-bold text-gray-800">18</div> -->
+                                      </div>
+                                      <div class="col-auto">
+                                          <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xl-4 col-md-4 mb-4"></div>
+                  </div>
+                `;
+                $('conversationArea').append(mesBlock.replace(/\+/g,' '));
+                // $('#contentArea').append(mesBlock.replace(/\+/g,' '));
+                // window.scrollTo(0,document.body.scrollHeight);
+                document.getElementById('content').scrollTop = document.getElementById('content').scrollHeight;
+                }
+              })
+            } catch(err){console.log('error',err);}
+            }
+            if (typeof obj.history == 'array') {
+              $('conversationArea').html(obj.history)
+            }
+
+          })
+          console.log('Download conversation history '+$('.activeHLink').attr("data-theId"));
+        })
+      })
+
+      $(document).on('click','.groupLink',function(){
+        $('.activeHLink').removeClass('activeHLink')
+        $(this).removeClass('newMessage')
+        $(this).addClass('activeHLink')
+        loadTemplate('groupArea',function(){
+          callApi('getGroupInfo',[{"name":"groupId","value":$('.activeHLink').attr("data-theId")}],function(res){
+            console.log('getConversationInfo',res);
+            var obj = JSON.parse(res)
+            __RES = obj;
+            if (obj.groupName) { $('#groupName').val(obj.groupName);
+            } else { $('#groupName').val(obj.subscriptionId); }
+            var infoObj = JSON.parse(res)
+            delete infoObj['history'];
+            $('.initeToGroupButton').attr('data-conversationInfo',JSON.stringify(infoObj));
+            $('#activeGroupId').val(obj.groupId);
+            $('#groupDescription').html(obj.groupDescription);
+            $('.clearConversationAction').attr('data-conversationId',obj.groupId);
+            $('.arciveGroupAction').attr('data-conversationId',obj.groupId);
+            $('.blockGroupAction').attr('data-conversationId',obj.groupId);
+            if (typeof obj.myGroupProfileID != 'undefined') {
+              var me = getInfoByAddress(obj.myGroupProfileID)
+              $('#currentProfile').html(obj.myGroupProfileID)
+              $('#currentProfile').attr('data-theId',obj.myGroupProfileID)
+              $('#currentProfileName').html(me)
+              $('#converationMyId').html(me)
+              $('#converationMyId').attr('data-theId',obj.myGroupProfileID)
+            } else {
+              $('#currentProfile').attr('data-theId',$('#currentProfile').html())
+            }
+            $('footer').removeClass('d-none');
+            if (typeof obj.history == 'string' && obj.history != '') {
+              var historyItems = [];
+              // g0 - date, g2 - object, g1 - full
+              obj.history.replace(/\[saiStorageHistory_([0-9]+)\](.*?)\[\/saiStorageHistory_([0-9]+)\]/g, function(g0,g1,g2){historyItems.push(g2);})
+              try{
+              $.each(historyItems,function(i,v){
+                var Message = JSON.parse(v);
+                Message.message = b64DecodeUnicode(Message.message);
+                var from = getInfoByAddress(Message.from)
+                Message.message = prepareMessage(Message.message);
+                if (Message.conversationId == $('.activeHLink').attr("data-theId") && Message.from == $('#converationMyId').attr('data-theId') ) {
+                  var mesBlock = `
+                  <!-- Content Row -->
+                  <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-4"></div>
+                      <!-- Pending Requests Card Example -->
+                      <div class="col-xl-8 col-md-8 mb-4">
+                          <div class="card border-left-success shadow h-100 py-2">
+                              <div class="card-body">
+                                  <div class="row no-gutters align-items-center">
+                                      <div class="col mr-2">
+                                          <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                            me - <span class="prtAddr">${Message.from}</span>
+                                          </div>
+                                          <div class="h5 mb-0 text-gray-800">${Message.message}</div>
+                                          <!-- <div class="h5 mb-0 font-weight-bold text-gray-800">18</div> -->
+                                      </div>
+                                      <div class="col-auto">
+                                          <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                `;
+                $('conversationArea').append(mesBlock);
+                // $('#contentArea').append(mesBlock);
+                // window.scrollTo(0,document.body.scrollHeight);
+                document.getElementById('content').scrollTop = document.getElementById('content').scrollHeight;
+                }
+                if (Message.conversationId == $('.activeHLink').attr("data-theId") && Message.from != $('#converationMyId').attr('data-theId') ) {
+                  var mesBlock = `
+                  <!-- Content Row -->
+                  <div class="row">
+                      <!-- Pending Requests Card Example -->
+                      <div class="col-xl-8 col-md-8 mb-4 align-self-start">
+                          <div class="card border-left-warning shadow h-100 py-2">
+                              <div class="card-body">
+                                  <div class="row no-gutters align-items-center">
+                                      <div class="col mr-2">
+                                          <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                            ${from} - <span class="prtAddr">${Message.from}</span>
+                                          </div>
+                                          <div class="h5 mb-0 text-gray-800">${Message.message}</div>
+                                          <!-- <div class="h5 mb-0 font-weight-bold text-gray-800">18</div> -->
+                                      </div>
+                                      <div class="col-auto">
+                                          <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xl-4 col-md-4 mb-4"></div>
+                  </div>
+                `;
+                $('conversationArea').append(mesBlock.replace(/\+/g,' '));
+                // $('#contentArea').append(mesBlock.replace(/\+/g,' '));
+                // window.scrollTo(0,document.body.scrollHeight);
+                document.getElementById('content').scrollTop = document.getElementById('content').scrollHeight;
+                }
+              })
+            } catch(err){console.log('error',err);}
+            }
+            if (typeof obj.history == 'array') {
+              $('conversationArea').html(obj.history)
+            }
+
+          })
+          console.log('Download group history '+$('.activeHLink').attr("data-theId"));
+        })
+      })
+
+// new conversation
+      $(document).on('submit','#createNewConversationeForm',function(){
+        $('footer').addClass('d-none');
+        callApi('createConversaion',$(this).serializeArray(),function(res){
+          callApi('getMyConversations',null,function(res){
+            var obj = JSON.parse(res)
+            var conversationsList = ''
+            $.each( obj, function( i, id ) {
+              var info = getInfoByConvId(id);
+              conversationsList+=`<h6 class="longstringWrap conversationLink" data-theId="${id}" href="buttons.html">${info}</h6>`
+            });
+            $('#conversationsList').html(conversationsList)
+          })
+        })
+        return false;
+      })
+
+      $(document).on('click','.createNewConversation',function(){
+        loadTemplate('createNewConversation',function(){
+          callApi('getMyIds',null,function(res){
+            var obj = JSON.parse(res)
+            var profilesList = ''
+            $.each( obj, function( i, val ) {
+               var name = getInfoByAddress(val);
+               profilesList+=`<option value="${val}" >${name} - ${val}</option>`
+            });
+            $('#my_address').html(profilesList);
+          })
+        })
+      })
+
+      $(document).on('click','.arciveConversationAction',function(){
+        var param = [
+          {"name":"conversationId","value":$(this).attr('data-conversationId')},
+        ]
+        callApi('archiveConversaion',param,function(res){
+          $('#contentArea').html('The conversation was archived');
+          callApi('getMyConversations',null,function(res){
+            var obj = JSON.parse(res)
+            var conversationsList = ''
+            $.each( obj, function( i, id ) {
+              var info = getInfoByConvId(id);
+              conversationsList+=`<h6 class="longstringWrap conversationLink" data-theId="${id}" href="buttons.html">${info}</h6>`
+            });
+            $('#conversationsList').html(conversationsList)
+          })
+        })
+      })
+
+      $(document).on('click','.clearConversationAction',function(){
+        var param = [
+          {"name":"conversationId","value":$(this).attr('data-conversationId')},
+        ]
+        callApi('clearConversaion',param,function(res){
+          $('conversationArea').html('The conversation was cleared');
+          // $('#contentArea').html('The conversation was cleared');
+        })
+      })
+// new group
+      $(document).on('submit','#createNewGoupForm',function(){
+        callApi('createGroup',$(this).serializeArray(),function(res){
+          callApi('getMySubscriptions',null,function(res){
+            displayMySubscription(res)
+          })
+        })
+        return false;
+      })
+
+      $(document).on('click','.createNewGroup',function(){
+        $('footer').addClass('d-none')
+        loadTemplate('createNewGroup',function(){
+          $(function() {
+            $('#groupTypeToggle').bootstrapToggle();
+          })
+          // callApi('getMyIds',null,function(res){
+          //   var obj = JSON.parse(res)
+          //   var profilesList = ''
+          //   $.each( obj, function( i, val ) {
+          //      var name = getInfoByAddress(val);
+          //      profilesList+=`<option value="${val}" >${name} - ${val}</option>`
+          //   });
+          //   $('#my_address').html(profilesList);
+          // })
+          // callApi('getMyContacts',null,function(res){
+          //   var obj = JSON.parse(res)
+          //   var profilesList = ''
+          //   $.each( obj, function( i, val ) {
+          //      var name = getInfoByAddress(val);
+          //      profilesList+=`<option value="${val}" >${name} - ${val}</option>`
+          //   });
+          //   $('#my_contacts').html(profilesList);
+          // })
+        })
+      })
+// send message
+      $(document).on('click','#sendMessageButton',function(){
+        var id = uid()
+        var param = [
+          {"name":"from","value":$('#currentProfile').attr('data-theId')},
+          {"name":"to","value":$('#converationWithId').attr('data-theId')},
+          {"name":"type","value":"message"},
+          {"name":"message","value":$('#messageInput').val()},
+          {"name":"converasationId","value":$('.activeHLink').attr("data-theId")},
+          {"name":"messageFrontId","value":$('.activeHLink').attr("data-theId")+id}
+        ]
+        var mesBlock = `
+          <!-- Content Row -->
+          <div class="row">
+            <div class="col-xl-4 col-md-4 mb-4"></div>
+              <!-- Pending Requests Card Example -->
+              <div class="col-xl-8 col-md-8 mb-4">
+                  <div class="card border-left-success shadow h-100 py-2 sending" id="${param[5].value}">
+                      <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                              <div class="col mr-2">
+                                  <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                    me - <span class="prtAddr">${param[0].value}</span>
+                                  </div>
+                                  <div class="h5 mb-0 text-gray-800">${param[3].value}</div>
+                                  <!-- <div class="h5 mb-0 font-weight-bold text-gray-800">18</div> -->
+                              </div>
+                              <div class="col-auto">
+                                  <i class="fas fa-comments fa-2x text-gray-300"></i>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        `;
+        $('conversationArea').append(mesBlock);
+        // window.scrollTo(0,document.body.scrollHeight);
+        document.getElementById('content').scrollTop = document.getElementById('content').scrollHeight;
+        if (typeof $('#activeGroupId').val() != 'undefined') {
+          param.push({"name":"groupId","value":$('#activeGroupId').val()});
+          callApi('sendGroupMessage',param,function(res){ $('#messageInput').val(''); });
+        } else {
+          callApi('sendMessage',param,function(res){ $('#messageInput').val(''); });
+        }
+      })
+
+      $("#messageInput").keyup(function(event) {
+          if (event.keyCode === 13) {
+              $("#sendMessageButton").click();
+          }
+      });
+// / send message
+
+// settings
+      $(document).on('click','#settings',function(){
+        $('footer').addClass('d-none')
+        loadTemplate('settings',function(){
+          callApi('getBackendSettings',null,function(settings){
+            console.log("SETINGS",settings);
+          })
+        })
+      })
+// /settings
+
+
+// Profile
+      $(document).on('click','.currentProfileSelectLink',function(){
+        $('#currentProfile').html($(this).attr('data-profileId'))
+        $('#currentProfileName').html($(this).attr('data-profileName'))
+        $('#currentProfileInConversation').html('Current ID: '+$(this).attr('data-profileId'))
+      })
+
+      $(document).on('click','.createNewProfile',function(){
+        $('footer').addClass('d-none')
+        loadTemplate('createNewProfile',function(){
+          $(document).on('submit','#createNewProfileForm',function(){
+            callApi('createId',$(this).serializeArray(),function(){
+              callApi('getMyIds',null,function(res){
+                var obj = JSON.parse(res)
+                var profilesList = ''
+                $.each( obj, function( i, val ) {
+                   var name = getInfoByAddress(val);
+                   profilesList+=`
+                   <a class="dropdown-item currentProfileSelectLink" data-profileId="${val}" data-profileName="${name}" href="#">
+                       <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                       ${name}<br>
+                       ${val}
+                   </a>`
+                });
+                $('#profilesList').html(profilesList);
+                displayAlert('Profile created')
+              })
+            });
+            // callApi($( this ).serialize());
+            return false;
+          })
+        });
+      })
+// contacts
+      $(document).on('click','.myContacts',function(){
+        $('footer').addClass('d-none')
+        loadTemplate('contacts');
+        return false;
+      });
+
+// / contacts
+
+// Search Channel & Subscribe
+      $(document).on('click','.tour',function(){
+        displayWelcomeodal();
+        return false;
+      });
+      $(document).on('click','.findChannel',function(){
+        $('footer').addClass('d-none')
+        loadTemplate('findChannel');
+        return false;
+      });
+      $(document).on('click','.findGroup',function(){
+        $('footer').addClass('d-none')
+        loadTemplate('findGroup');
+        return false;
+      });
+      $(document).on('submit','#serachChannelForm',function(){
+        $.get(_nameServer+'get_data&collection=saiMessageNameServer&type='+$('#searchSubscType').val()+'&$or[][address]='+$('#serachChannel').val()+
+                                                      '&$or[][description][$regex]='+$('#serachChannel').val()+
+                                                      '&$or[][name][$regex]='+$('#serachChannel').val(),
+                function(res){
+                  var html = '<br><h4>Search result</h4>'
+                  _H = res
+                  if (!res.result.length) {
+                    html+='Nothing finded';
+                  } else {
+                    $.each(res.result,function(i,v){
+                      html+=`<div class="card">
+                                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                      <h6 class="m-0 font-weight-bold text-primary">${v.name}</h6>
+                                      <div class="dropdown no-arrow">
+                                          <!-- <span>${v.address}</span> -->
+                                          <button class="btn btn-sm btn-warning subscribeChannelButton" data-type="${v.type}" data-name="${v.name}" data-description="${v.description}" data-channelId="${v.address}">Subscribe</button>
+                                      </div>
+                                  </div>
+                                  <div class="card-body">
+                                    ${v.address}<br>
+                                      ${v.description}
+                                  </div>
+                              </div>`;
+                    });
+                  }
+                  $('searchChannelasection').html(html+'<br>');
+                } );
+        return false;
+      });
+      $(document).on('submit','#serachContactForm',function(){
+        $.get(_nameServer+'get_data&collection=saiMessageNameServer&type=private&$or[][address]='+$('#serachContact').val()+
+                                                      '&$or[][info][$regex]='+$('#serachContact').val()+
+                                                      '&$or[][name][$regex]='+$('#serachContact').val(),
+                function(res){
+                  var html = '<br><h4>Search result</h4>'
+                  _H = res
+                  if (!res.result.length) {
+                    html+='Nothing finded';
+                  } else {
+                    $.each(res.result,function(i,v){
+                      if (typeof v.info == 'undefined') var info = '';
+                      else var info = v.info;
+                      html+=`<div class="card">
+                                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                      <h6 class="m-0 font-weight-bold text-primary">${v.name}</h6>
+                                      <div class="dropdown no-arrow">
+                                          <button class="btn btn-sm btn-warning addContactButton" data-type="${v.type}" data-name="${v.name}" data-info="${info}" data-contactId="${v.address}">Add to contacts</button>
+                                      </div>
+                                  </div>
+                                  <div class="card-body">
+                                      ${v.address}<br>
+                                      ${info}
+                                  </div>
+                              </div>`;
+                    });
+                  }
+                  $('searchContactSection').html(html+'<br>');
+                } );
+        return false;
+      });
+      $(document).on('submit','#searchchContact4conversationForm',function(){
+        $.get(_nameServer+'get_data&collection=saiMessageNameServer&type=private&$or[][address]='+$('#serachContact4conversation').val()+
+                                                      '&$or[][info][$regex]='+$('#serachContact4conversation').val()+
+                                                      '&$or[][name][$regex]='+$('#serachContact4conversation').val(),
+                function(res){
+                  var html = '<br><h4>Search result</h4>'
+                  _H = res
+                  if (!res.result.length) {
+                    html+='Nothing finded';
+                  } else {
+                    $.each(res.result,function(i,v){
+                      if (typeof v.info == 'undefined') var info = '';
+                      else var info = v.info;
+                      html+=`<div class="card">
+                                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                      <h6 class="m-0 font-weight-bold text-primary">${v.name}</h6>
+                                      <div class="dropdown no-arrow">
+                                          <button class="btn btn-sm btn-warning selectContact4conversationButton" data-name="${v.name}" data-info="${info}" data-contactId="${v.address}">Select</button>
+                                      </div>
+                                  </div>
+                                  <div class="card-body">
+                                    ${v.address}<br>
+                                      ${info}
+                                  </div>
+                              </div>`;
+                    });
+                  }
+                  $('searchContactSection').html(html+'<br>');
+                } );
+        return false;
+      });
+      $(document).on('submit','#subscribeForm',function(){
+        callApi('subscribe',$(this).serializeArray(),function(){
+          callApi('getMySubscriptions',null,function(res){
+            displayMySubscription(res)
+          })
+        })
+        return false;
+      });
+      $(document).on('click','.subscribeChannelButton',function(){
+        var param = [
+          {"name":"name","value":$(this).attr('data-name')},
+          {"name":"type","value":$(this).attr('data-type')},
+          {"name":"description","value":$(this).attr('data-description')},
+          {"name":"subscriptionId","value":$(this).attr('data-channelId')}
+        ]
+        callApi('subscribe',param,function(){
+          callApi('getMySubscriptions',null,function(res){
+            displayMySubscription(res)
+          })
+        })
+        return false;
+      });
+      $(document).on('click','.selectContact4conversationButton',function(){
+        $('#conversationWithAddress').val($(this).attr('data-contactId'))
+      })
+      $(document).on('click','.addContactButton',function(){
+        var param = [
+          {"name":"name","value":$(this).attr('data-name')},
+          {"name":"type","value":$(this).attr('data-type')},
+          {"name":"info","value":$(this).attr('data-description')},
+          {"name":"address","value":$(this).attr('data-contactId')}
+        ]
+        callApi('addMyContact',param,function(){
+          callApi('getMyContacts',null,function(res){
+            var obj = JSON.parse(res)
+            __AddressesInfo = obj
+          })
+        })
+        return false;
+      });
+      $(document).on('submit','.addContactForm',function(){
+        callApi('addMyContact',$(this).serializeArray(),function(){
+          callApi('getMyContacts',null,function(res){
+            var obj = JSON.parse(res)
+            __AddressesInfo = obj
+          })
+        })
+        return false;
+      });
+      $(document).on('submit','.subscribeChannelButton',function(){
+        callApi('subscribe',{'name':'subscriptionId','value':$(this).attr('data-channelId')},function(){
+          callApi('getMySubscriptions',null,function(res){
+            displayMySubscription(res)
+          })
+        })
+        return false;
+      })
+// /Search Channel & Subscribe
+// Subscribe action button from message
+      $(document).on('click','.subscribeActionButton',function(){
+        alert(3)
+        if (confirm('you are going to subscribe')) {
+          var sbscrdata = JSON.parse($('.subscribeActionButton').attr('data-sbscrid').replace(/`/g,''))
+          if (typeof sbscrdata.group) {
+            var param = [
+              {'name':'subscriptionId','value':sbscrdata.group},
+              {'name':'type','value':'group'},
+            ]
+            if (typeof sbscrdata.secret != 'undefined') {
+              param.push({'name':'secret','value':sbscrdata.secret});
+            }
+            if (typeof sbscrdata.description != 'undefined') {
+              param.push({'name':'description','value':sbscrdata.description});
+            }
+            if (typeof sbscrdata.name != 'undefined') {
+              param.push({'name':'name','value':sbscrdata.name});
+            }
+            alert('hoh')
+            callApi('acceptInvitationToGroup',param,function(res){
+              callApi('subscribe',param,function(res){
+                callApi('getMySubscriptions',null,function(res){
+                  displayMySubscription(res)
+                })
+              })
+            })
+          }
+        } else {
+          return false;
+        }
+        return false;
+      })
+
+// Invite to group
+$(document).on('submit','.inviteToGroupForm', function(){
+  var param = $(this).serializeArray();
+  var groupInfo =JSON.parse( $(this).attr('data-groupInfo'));
+  $.merge(param, groupInfo);
+  callApi('inviteToGroup',param,function(res) {
+    console.log('inviteToGroup result ',res);
+  })
+  return false;
+});
+
+// add contact button
+  $(document).on('click','.prtAddr',function(){
+    if ($(this).attr('data-btype') == 'addToAddressBook' ) {
+      return true;
+    }
+    $(this).attr('data-btype','addToAddressBook');
+    $(this).attr('data-toggle','modal');
+    $(this).attr('data-target','#modal');
+    $(this).click();
+  })
+
+// Subscribe action button from message
+      $('.convdropdown').on('shown.bs.dropdown', function(){
+        $('.badge-conv-counter').html('');
+      });
+      $('.groupdropdown').on('shown.bs.dropdown', function(){
+        $('.bagde-group-counter').html('');
+      });
+    }) // /ready
+
+
+function displayMySubscription(res){
+  var obj = JSON.parse(res)
+  console.log('Subscription OBJ',obj);
+  var channelsList = '';
+  var botsList = '';
+  var groupsList = '';
+  var info = '';
+  $.each( obj, function( id, subscr ) {
+    if (subscr.name) { info = subscr.name } else {info = id }
+    if(subscr.type == 'channel') {
+      channelsList+=`<h6 class="longstringWrap channelLink" data-theId="${id}" href="buttons.html">${info}</h6>`
+    }
+    if(subscr.type == 'bot') {
+      botsList+=`<h6 class="longstringWrap botLink" data-theId="${id}" href="buttons.html">${info}</h6>`
+    }
+    if(subscr.type == 'group') {
+      groupsList+=`<h6 class="longstringWrap groupLink" data-theId="${id}" href="buttons.html">${info}</h6>`
+    }
+  });
+  $('#channelsList').html(channelsList)
+  $('#botsList').html(botsList)
+  $('#groupsList').html(groupsList)
+}
+
+
+function displayWelcomeodal() {
+   $('.modal-body').html("<video controls autoplay style='width:100%' src='http://localhost/Frontendv2/img/welcom.webm'></video>");
+  $('#modal').modal('show');
+}
+function displayAlert(mes) {
+  $('.modal-body').html(mes);
+  $('#modal').modal('show');
+  $('#modal').delay(1000).fadeOut(450);
+   setTimeout(function(){
+      $('#modal').modal("hide");
+   }, 1500);
+}
+
+// function beep() {
+//     var snd = new Audio("data:audio/wav;base64,//uQRAAAAWMSLwUIYAAsYkXgoQwAEaYLWfkWgAI0wWs/ItAAAGDgYtAgAyN+QWaAAihwMWm4G8QQRDiMcCBcH3Cc+CDv/7xA4Tvh9Rz/y8QADBwMWgQAZG/ILNAARQ4GLTcDeIIIhxGOBAuD7hOfBB3/94gcJ3w+o5/5eIAIAAAVwWgQAVQ2ORaIQwEMAJiDg95G4nQL7mQVWI6GwRcfsZAcsKkJvxgxEjzFUgfHoSQ9Qq7KNwqHwuB13MA4a1q/DmBrHgPcmjiGoh//EwC5nGPEmS4RcfkVKOhJf+WOgoxJclFz3kgn//dBA+ya1GhurNn8zb//9NNutNuhz31f////9vt///z+IdAEAAAK4LQIAKobHItEIYCGAExBwe8jcToF9zIKrEdDYIuP2MgOWFSE34wYiR5iqQPj0JIeoVdlG4VD4XA67mAcNa1fhzA1jwHuTRxDUQ//iYBczjHiTJcIuPyKlHQkv/LHQUYkuSi57yQT//uggfZNajQ3Vmz+Zt//+mm3Wm3Q576v////+32///5/EOgAAADVghQAAAAA//uQZAUAB1WI0PZugAAAAAoQwAAAEk3nRd2qAAAAACiDgAAAAAAABCqEEQRLCgwpBGMlJkIz8jKhGvj4k6jzRnqasNKIeoh5gI7BJaC1A1AoNBjJgbyApVS4IDlZgDU5WUAxEKDNmmALHzZp0Fkz1FMTmGFl1FMEyodIavcCAUHDWrKAIA4aa2oCgILEBupZgHvAhEBcZ6joQBxS76AgccrFlczBvKLC0QI2cBoCFvfTDAo7eoOQInqDPBtvrDEZBNYN5xwNwxQRfw8ZQ5wQVLvO8OYU+mHvFLlDh05Mdg7BT6YrRPpCBznMB2r//xKJjyyOh+cImr2/4doscwD6neZjuZR4AgAABYAAAABy1xcdQtxYBYYZdifkUDgzzXaXn98Z0oi9ILU5mBjFANmRwlVJ3/6jYDAmxaiDG3/6xjQQCCKkRb/6kg/wW+kSJ5//rLobkLSiKmqP/0ikJuDaSaSf/6JiLYLEYnW/+kXg1WRVJL/9EmQ1YZIsv/6Qzwy5qk7/+tEU0nkls3/zIUMPKNX/6yZLf+kFgAfgGyLFAUwY//uQZAUABcd5UiNPVXAAAApAAAAAE0VZQKw9ISAAACgAAAAAVQIygIElVrFkBS+Jhi+EAuu+lKAkYUEIsmEAEoMeDmCETMvfSHTGkF5RWH7kz/ESHWPAq/kcCRhqBtMdokPdM7vil7RG98A2sc7zO6ZvTdM7pmOUAZTnJW+NXxqmd41dqJ6mLTXxrPpnV8avaIf5SvL7pndPvPpndJR9Kuu8fePvuiuhorgWjp7Mf/PRjxcFCPDkW31srioCExivv9lcwKEaHsf/7ow2Fl1T/9RkXgEhYElAoCLFtMArxwivDJJ+bR1HTKJdlEoTELCIqgEwVGSQ+hIm0NbK8WXcTEI0UPoa2NbG4y2K00JEWbZavJXkYaqo9CRHS55FcZTjKEk3NKoCYUnSQ0rWxrZbFKbKIhOKPZe1cJKzZSaQrIyULHDZmV5K4xySsDRKWOruanGtjLJXFEmwaIbDLX0hIPBUQPVFVkQkDoUNfSoDgQGKPekoxeGzA4DUvnn4bxzcZrtJyipKfPNy5w+9lnXwgqsiyHNeSVpemw4bWb9psYeq//uQZBoABQt4yMVxYAIAAAkQoAAAHvYpL5m6AAgAACXDAAAAD59jblTirQe9upFsmZbpMudy7Lz1X1DYsxOOSWpfPqNX2WqktK0DMvuGwlbNj44TleLPQ+Gsfb+GOWOKJoIrWb3cIMeeON6lz2umTqMXV8Mj30yWPpjoSa9ujK8SyeJP5y5mOW1D6hvLepeveEAEDo0mgCRClOEgANv3B9a6fikgUSu/DmAMATrGx7nng5p5iimPNZsfQLYB2sDLIkzRKZOHGAaUyDcpFBSLG9MCQALgAIgQs2YunOszLSAyQYPVC2YdGGeHD2dTdJk1pAHGAWDjnkcLKFymS3RQZTInzySoBwMG0QueC3gMsCEYxUqlrcxK6k1LQQcsmyYeQPdC2YfuGPASCBkcVMQQqpVJshui1tkXQJQV0OXGAZMXSOEEBRirXbVRQW7ugq7IM7rPWSZyDlM3IuNEkxzCOJ0ny2ThNkyRai1b6ev//3dzNGzNb//4uAvHT5sURcZCFcuKLhOFs8mLAAEAt4UWAAIABAAAAAB4qbHo0tIjVkUU//uQZAwABfSFz3ZqQAAAAAngwAAAE1HjMp2qAAAAACZDgAAAD5UkTE1UgZEUExqYynN1qZvqIOREEFmBcJQkwdxiFtw0qEOkGYfRDifBui9MQg4QAHAqWtAWHoCxu1Yf4VfWLPIM2mHDFsbQEVGwyqQoQcwnfHeIkNt9YnkiaS1oizycqJrx4KOQjahZxWbcZgztj2c49nKmkId44S71j0c8eV9yDK6uPRzx5X18eDvjvQ6yKo9ZSS6l//8elePK/Lf//IInrOF/FvDoADYAGBMGb7FtErm5MXMlmPAJQVgWta7Zx2go+8xJ0UiCb8LHHdftWyLJE0QIAIsI+UbXu67dZMjmgDGCGl1H+vpF4NSDckSIkk7Vd+sxEhBQMRU8j/12UIRhzSaUdQ+rQU5kGeFxm+hb1oh6pWWmv3uvmReDl0UnvtapVaIzo1jZbf/pD6ElLqSX+rUmOQNpJFa/r+sa4e/pBlAABoAAAAA3CUgShLdGIxsY7AUABPRrgCABdDuQ5GC7DqPQCgbbJUAoRSUj+NIEig0YfyWUho1VBBBA//uQZB4ABZx5zfMakeAAAAmwAAAAF5F3P0w9GtAAACfAAAAAwLhMDmAYWMgVEG1U0FIGCBgXBXAtfMH10000EEEEEECUBYln03TTTdNBDZopopYvrTTdNa325mImNg3TTPV9q3pmY0xoO6bv3r00y+IDGid/9aaaZTGMuj9mpu9Mpio1dXrr5HERTZSmqU36A3CumzN/9Robv/Xx4v9ijkSRSNLQhAWumap82WRSBUqXStV/YcS+XVLnSS+WLDroqArFkMEsAS+eWmrUzrO0oEmE40RlMZ5+ODIkAyKAGUwZ3mVKmcamcJnMW26MRPgUw6j+LkhyHGVGYjSUUKNpuJUQoOIAyDvEyG8S5yfK6dhZc0Tx1KI/gviKL6qvvFs1+bWtaz58uUNnryq6kt5RzOCkPWlVqVX2a/EEBUdU1KrXLf40GoiiFXK///qpoiDXrOgqDR38JB0bw7SoL+ZB9o1RCkQjQ2CBYZKd/+VJxZRRZlqSkKiws0WFxUyCwsKiMy7hUVFhIaCrNQsKkTIsLivwKKigsj8XYlwt/WKi2N4d//uQRCSAAjURNIHpMZBGYiaQPSYyAAABLAAAAAAAACWAAAAApUF/Mg+0aohSIRobBAsMlO//Kk4soosy1JSFRYWaLC4qZBYWFRGZdwqKiwkNBVmoWFSJkWFxX4FFRQWR+LsS4W/rFRb/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////VEFHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAU291bmRib3kuZGUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMjAwNGh0dHA6Ly93d3cuc291bmRib3kuZGUAAAAAAAAAACU=");
+//     snd.play();
+// }
+    </script>
+
+
+</body>
+
+</html>
